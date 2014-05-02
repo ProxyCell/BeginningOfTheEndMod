@@ -1,0 +1,64 @@
+###################################
+#
+# Beginning of the End Mod 
+# - Events to warn you and give you a chance to save your game for exporting to EU4
+#
+###################################
+
+# Written by ProxyCell - http://www.iruberleet.org
+
+namespace = BOTEM
+
+# Before EU4 Start
+narrative_event = {
+	id = BOTEM.1
+	title = EVTNAME_BOTEM_1
+	desc = EVTDESC_BOTEM_1
+	border = GFX_event_narrative_frame_diplomacy
+	
+	ai = no
+	
+	trigger = {
+		year = 1444
+		NOT = { has_global_flag = before_eu4_start }
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	immediate = {
+		set_global_flag = before_eu4_start
+	}
+	
+	option = {
+		name = EVTOPTA_BOTEM_1
+	}
+}
+
+# Before CK2 End
+narrative_event = {
+	id = BOTEM.2
+	title = EVTNAME_BOTEM_2
+	desc = EVTDESC_BOTEM_2
+	border = GFX_event_narrative_frame_diplomacy
+	
+	ai = no
+	
+	trigger = {
+		year = 1452
+		NOT = { has_global_flag = before_ck2_end }
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	immediate = {
+		set_global_flag = before_ck2_end
+	}
+	
+	option = {
+		name = EVTOPTA_BOTEM_1
+	}
+}
